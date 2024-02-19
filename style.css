@@ -3,7 +3,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 }
 
 ul, ol, menu{
@@ -21,4 +21,147 @@ img{
 
 body{
     font-family: "Lato", sans-serif;
+}
+
+
+
+/* DEBUG */
+
+.bg-black{
+    background-color: black;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-goldenrod{
+    background-color: goldenrod;
+}
+
+
+
+/* UTILITIES */
+
+.bg-lightgrey{
+    background-color: lightgrey;
+}
+
+.bg-beige{
+    background-color: beige;
+}
+
+.bg-cyan{
+    background-color: rgb(166, 215, 249);
+}
+
+.chat,
+.card-body{
+    flex-grow: 1;
+}
+
+.card-body{
+    overflow: hidden;
+}
+
+
+/* LAYOUT */
+
+#app{
+    display:flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(78, 147, 137) 0px, rgb(78, 147, 137) 200px, rgb(219, 219, 212) 200px, rgb(219, 219, 212) 100%);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.side{
+    display: none;
+    background-color: white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.mine-profile,
+.card-header{
+    height: 70px;
+}
+
+.notice{
+    height: 80px;
+    display: none;
+}
+
+.search-bar{
+    display: none;
+}
+
+.bar{
+    height: 30px;
+}
+
+.profiles-list > li{
+    border: 1px solid lightgray;
+    height: 80px;
+}
+
+.card-footer{
+    height: 60px;
+}
+
+
+
+/* MEDIA QUERY */
+
+
+    /* TABLET */
+
+@media (min-width: 540px){
+
+    .side{
+        display: block;
+        width: 80px;
+    }
+}
+
+
+
+    /* DESKTOP */
+
+@media (min-width: 992px){
+    
+    .container{
+        width: 80%;
+        height: 90%;
+    }
+
+    .side{
+        width: 250px;
+        overflow: auto;
+    }
+
+    .notice{
+        display: block;
+    }
+
+    .search-bar{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .card-body{
+        overflow: auto;
+    }
 }
