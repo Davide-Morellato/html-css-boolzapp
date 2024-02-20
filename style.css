@@ -60,6 +60,12 @@ body{
     flex-grow: 1;
 }
 
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .card-body{
     overflow: hidden;
 }
@@ -154,19 +160,11 @@ body{
     display: none;
 }
 
-.profile-img-chat{
-    margin: auto;
-}
-
 .profile-status{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-}
-
-.chat-tools{
-    display: none;
 }
 
 
@@ -180,7 +178,7 @@ body{
 
     .sidebar{
         display: block;
-        width: 80px;
+        width: 100px;
     }
 
     .sidebar-tools-list{
@@ -237,6 +235,10 @@ body{
         padding: 0 5px;
     }
 
+    .sidebar-notice figcaption a{
+        text-decoration: underline;
+    }
+
     .sidebar-search-bar{
         display: flex;
         flex-direction: column;
@@ -253,7 +255,7 @@ body{
     }
 
     .sidebar-profiles-list li > span{
-        display: inline-flex;
+        display: block;
     }
     
     .sidebar-profile{
