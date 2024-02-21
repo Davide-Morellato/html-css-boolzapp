@@ -25,22 +25,6 @@ body{
 
 
 
-/* DEBUG */
-
-.bg-black{
-    background-color: black;
-}
-
-.bg-red{
-    background-color: red;
-}
-
-.bg-goldenrod{
-    background-color: goldenrod;
-}
-
-
-
 /* UTILITIES */
 
 .bg-lightgrey{
@@ -129,6 +113,10 @@ body{
 
 /* SIDEBAR */
 
+.sidebar-header{
+    border-right: 1px solid rgb(177, 177, 177);
+}
+
 .profile-img{
     width: 50px;
     aspect-ratio: 1/1;
@@ -215,6 +203,11 @@ body{
     flex-grow: 1;
 }
 
+.chat-body{
+    background-image: url(./img/mine.jpg);
+    background-size: auto;
+}
+
 .chat-body-mex{
     display: flex;
     flex-direction: column;
@@ -249,10 +242,25 @@ body{
     right: 10px;
 }
 
+.menu-hover{
+    border: 1px solid black;
+    position: absolute;
+    top: 26px;
+    right: 10px;
+    background-color: lightgrey;
+    z-index: -1;
+    line-height: 1.7em;
+    padding: 10px;
+}
+
+.chevron-icon:hover + .menu-hover{
+    z-index: 1;
+
+}
+
 
 
 /* MEDIA QUERY */
-
 
     /* TABLET */
 
@@ -342,7 +350,7 @@ body{
     }
 
     .sidebar-notice figcaption{
-        padding: 0 5px;
+        padding: 0 10px;
     }
 
     .sidebar-notice figcaption a{
