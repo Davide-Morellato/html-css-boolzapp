@@ -110,12 +110,13 @@ body{
 
 /* SIDEBAR */
 
-.sidebar-profile-img,
+.profile-img,
 .profile-img-chat{
     width: 60px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: block;
+    object-fit: cover;
 }
 
 .sidebar-notice{
@@ -138,34 +139,28 @@ body{
     height: 30px;
 }
 
-.sidebar-profiles-list{
+.profiles-list{
     border: 1px solid lightgray;
     flex-grow: 1;
 }
 
-.sidebar-profiles-list > li{
+.profiles-list > li{
     border-bottom: 1px solid lightgray;
     padding: 10px;
 }
 
-.sidebar-profiles-list li > span{
+.profiles-list li > span{
     display: none;
 }
 
-.sidebar-profile-img{
+.sidebar-profile .profile-img{
     margin: auto;
 }
 
-.sidebar-profile-status{
+.profile-status{
     display: none;
 }
 
-.profile-status{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
 
 
 
@@ -181,8 +176,12 @@ body{
         width: 100px;
     }
 
-    .sidebar-tools-list{
+    .tools-list{
         display: none
+    }
+  
+    .profile-status{
+        display: none;
     }
 }
 
@@ -207,7 +206,7 @@ body{
         align-items: center;
     }
 
-    .sidebar-tools-list{
+    .tools-list{
         display: flex;
         gap: 20px;
         padding: 10px;
@@ -245,16 +244,16 @@ body{
         padding: 10px;
     }
 
-    .sidebar-profiles-list{
+    .profiles-list{
         overflow: auto;
     }
 
-    .sidebar-profiles-list > li{
+    .profiles-list > li{
         display: flex;
         justify-content: space-between;
     }
 
-    .sidebar-profiles-list li > span{
+    .profiles-list li > span{
         display: block;
     }
     
@@ -262,7 +261,7 @@ body{
         display: flex;
     }
 
-    .sidebar-profile-status{
+    .profile-status{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -272,4 +271,6 @@ body{
     .card-body{
         overflow: auto;
     }
+
+    
 }
