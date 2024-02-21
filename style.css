@@ -56,7 +56,7 @@ body{
 }
 
 .chat,
-.card-body{
+.chat-body{
     flex-grow: 1;
 }
 
@@ -66,7 +66,7 @@ body{
     flex-wrap: wrap;
 }
 
-.card-body{
+.chat-body{
     overflow: hidden;
 }
 
@@ -103,16 +103,19 @@ body{
     height: 100%
 }
 
-.card-header{
+.sidebar-header,
+.sidebar-notice,
+.profiles-list > li,
+.chat-header,
+.chat-footer{
     padding: 10px;
-    height: 90px;
+    height: 80px;
 }
 
 /* SIDEBAR */
 
-.profile-img,
-.profile-img-chat{
-    width: 60px;
+.profile-img{
+    width: 50px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: block;
@@ -121,11 +124,10 @@ body{
 
 .sidebar-notice{
     display: none;
-    padding: 5px;
 }
 
 .sidebar-notice-bell{
-    width: 60px;
+    width: 50px;
     aspect-ratio: 1/1;
     background-color: white;
     border-radius: 50%;
@@ -146,7 +148,6 @@ body{
 
 .profiles-list > li{
     border-bottom: 1px solid lightgray;
-    padding: 10px;
 }
 
 .profiles-list li > span{
@@ -161,6 +162,20 @@ body{
     display: none;
 }
 
+.chatbar-profile{
+    display: flex;
+}
+
+.chatbar-profile .tools-list{
+    display: none;
+}
+
+.chatbar-profile .profile-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
 
 
 
@@ -176,12 +191,28 @@ body{
         width: 100px;
     }
 
+    .sidebar-header .profile-img{
+        margin: auto;
+    }
+    
     .tools-list{
         display: none
     }
   
     .profile-status{
         display: none;
+    }
+
+    .chatbar-profile{
+        align-items: center;
+    }
+
+    .chatbar-profile .tools-list{
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+        color: rgb(177, 177, 177);
+        margin-left: auto;
     }
 }
 
@@ -200,7 +231,7 @@ body{
         width: 370px;
     }
 
-    .card-header{
+    .sidebar-header{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -257,7 +288,8 @@ body{
         display: block;
     }
     
-    .sidebar-profile{
+    .sidebar-profile,
+    .chatbar-profile{
         display: flex;
     }
 
@@ -272,5 +304,4 @@ body{
         overflow: auto;
     }
 
-    
 }
