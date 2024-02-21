@@ -139,6 +139,7 @@ body{
 
 .bar{
     height: 30px;
+    width: 100%;
 }
 
 .profiles-list{
@@ -177,6 +178,27 @@ body{
     padding: 10px;
 }
 
+.d-none{
+    display: none;
+}
+
+.chat-footer .tools-list{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    color: rgb(177, 177, 177);
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-g{
+    flex-grow: 1;
+}
+
+
+
+
 
 
 /* MEDIA QUERY */
@@ -184,7 +206,7 @@ body{
 
     /* TABLET */
 
-@media (min-width: 540px){
+@media (min-width: 576px){
 
     .sidebar{
         display: block;
@@ -213,6 +235,10 @@ body{
         padding: 10px;
         color: rgb(177, 177, 177);
         margin-left: auto;
+    }
+
+    .d-flex{
+        display: flex;
     }
 }
 
