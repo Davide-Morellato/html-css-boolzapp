@@ -74,6 +74,15 @@ body{
     color: rgb(177, 177, 177);
 }
 
+.pos-relative{
+    position: relative;
+}
+
+.pos-absolute{
+    position: absolute;
+}
+
+
 /* LAYOUT */
 
 #app{
@@ -111,6 +120,7 @@ body{
     padding: 10px;
     height: 80px;
 }
+
 
 /* SIDEBAR */
 
@@ -163,6 +173,10 @@ body{
     display: none;
 }
 
+
+
+/* CHAT */
+
 .chatbar-profile{
     display: flex;
 }
@@ -196,8 +210,34 @@ body{
     flex-grow: 1;
 }
 
+.chat-body-mex{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    gap: 20px;
+}
 
+.send-mex,
+.recive-mex{
+    max-width: 60%;
+    padding: 15px 15px 60px;
+    border-radius: 20px;  
+}
 
+.send-mex{
+    align-self: flex-end;
+    background-color: rgb(222, 248, 192);
+}
+
+.recive-mex{
+    align-self: flex-start;
+    background-color: white;
+}
+
+.time{
+    bottom: 10px;
+    right: 10px;
+}
 
 
 
@@ -239,6 +279,10 @@ body{
 
     .d-flex{
         display: flex;
+    }
+
+    .chat-body-mex{
+        padding: 60px 60px;
     }
 }
 
@@ -328,6 +372,10 @@ body{
 
     .card-body{
         overflow: auto;
+    }
+    
+    .chat-body-mex{
+        padding: 90px 120px;
     }
 
 }
